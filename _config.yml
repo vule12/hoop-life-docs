@@ -1,0 +1,9 @@
+title: Hoop Life
+description: Solo NBA career simulator for Android
+theme: jekyll-theme-minimal
+permalink: /:title
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
