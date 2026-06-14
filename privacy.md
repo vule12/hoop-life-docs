@@ -4,7 +4,7 @@ title: Privacy Policy
 
 # Privacy Policy — Hoop Life
 
-**Effective date:** 26 May 2026
+**Effective date:** 15 June 2026
 **App:** Hoop Life (Android package `com.vule12.hooplife`)
 **Developer contact:** ivulinec12@gmail.com
 
@@ -12,13 +12,21 @@ This is the privacy policy for the mobile application **Hoop Life** (the "App").
 
 ## Short version
 
-The App is a single-player offline basketball career simulator. We do **not** ask you to create an account, we do **not** collect personal information, we do **not** show ads, and we do **not** sell, share, or transfer any data to third parties for marketing or analytics.
+The App is a single-player, offline basketball career simulator. We do **not** ask you to create an account, we do **not** show ads, and we **never** sell your data or use it for advertising. We do not collect information that personally identifies you.
+
+Three background services make limited internet requests, and we have kept all of them as privacy-light as possible:
+
+- **Expo** — to deliver app updates.
+- **Sentry** — to send anonymous crash reports so we can fix bugs.
+- **Firebase Analytics (Google)** — to collect anonymous, aggregated usage statistics (such as which screens are opened and how long the App is used) so we can see how the game is played and improve it. **You can turn this off any time in Settings → Usage Analytics.**
+
+Details on all three are below.
 
 ## What stays on your device
 
 Everything you do in the App — your player, season progress, stats, achievements, settings — is stored **only on your device** using Android's local storage. It is never uploaded to a server we control. Uninstalling the App removes this data.
 
-## The one network interaction we have
+## App updates (Expo)
 
 The App uses **Expo Application Services (EAS) Updates** to deliver bug fixes and small improvements without forcing you to download a new version from Google Play. When the App starts, it contacts Expo's update server (`u.expo.dev`) to check whether a new JavaScript bundle is available. As part of any HTTPS request on the open internet, that server may automatically receive:
 
@@ -29,20 +37,49 @@ The App uses **Expo Application Services (EAS) Updates** to deliver bug fixes an
 
 This information is processed by Expo Inc. under their privacy policy, available at <https://expo.dev/privacy>. We (the App developer) do not see this information and do not store it. We use it solely so that you receive the correct update for your device. You can disable this by going offline — the App is fully playable without an internet connection.
 
+## Crash and error reporting (Sentry)
+
+To find and fix bugs, the App uses **Sentry**, an error-monitoring service operated by Functional Software, Inc. ("Sentry"). When the App hits an unexpected error or crash, it sends Sentry a diagnostic report containing:
+
+- The **error message and a technical stack trace** (which part of the code failed)
+- Your **device model and Android version**
+- The **app version and build number**
+- A randomly generated event identifier
+
+We have deliberately configured Sentry **not** to collect IP addresses or any other personally identifying information (the `sendDefaultPii` option is disabled). These reports contain no name, email, account, location, or game-save content, and cannot be used to identify you.
+
+Sentry processes this data on our behalf solely so we can diagnose stability problems — never for advertising or behavioral tracking. Reports are retained by Sentry for a limited period (Sentry's default is 90 days) and then deleted automatically. Sentry's own privacy policy is at <https://sentry.io/privacy/>, and data may be processed on servers in the United States. Crash reporting requires an internet connection; while offline, no reports are sent.
+
+## Usage analytics (Firebase / Google Analytics for Firebase)
+
+To understand how the App is used in aggregate — so we can fix rough spots and decide what to improve — the App uses **Firebase Analytics** (also called Google Analytics for Firebase), a service operated by Google LLC ("Google"). It records anonymous usage events such as:
+
+- App opens and **session starts**
+- **Screen views** (which screens you visit) and how long the App is in use (**engagement time**)
+- Standard technical context: **device model, Android version, app version, language, and coarse region** (country/region, derived from your IP address — Google does not store your IP as a precise location)
+- A randomly generated **app-instance identifier** that lets us count unique installs without knowing who you are
+
+These reports are **anonymous and aggregated**. They contain **no** name, email, account, contacts, precise location, or any of your game-save content, and we do not use them to identify you or to build an advertising profile. We do not permit Google to use this data to personalise ads, and we have **disabled collection of your device's advertising identifier** — the App does not read or transmit it.
+
+**This is optional and you control it.** Analytics are on by default but can be switched off at any time in **Settings → Usage Analytics**; turning it off stops collection immediately.
+
+Google processes this data on our behalf as a service provider, and data may be processed on servers in the United States. Google's handling of Firebase data is described at <https://firebase.google.com/support/privacy> and <https://policies.google.com/privacy>. Event-level analytics data is retained for a limited period (Firebase's default is up to 2 months for event data, with aggregated reports kept longer) and then deleted. Analytics require an internet connection; while offline, nothing is sent.
+
 ## What we do **not** do
 
 - No advertising SDKs.
-- No analytics SDKs (no Firebase Analytics, Google Analytics, Sentry, Mixpanel, AppsFlyer, etc.).
+- No advertising or marketing analytics, and no ad-targeting, profiling, or cross-app/cross-device ad tracking. The usage analytics we do collect (Firebase Analytics, described above) are anonymous, aggregated, used only to improve the App, and can be turned off in Settings.
 - No social login, no user accounts, no email collection.
 - No access to your contacts, calendar, photos, location, microphone, camera, or files.
 - No background tracking.
 - No cross-app or cross-device tracking.
+- No selling or sharing of data with anyone for marketing.
 
 ## Permissions used
 
 The App requests only these standard Android permissions:
 
-- **`INTERNET`** — required for EAS Updates (above) and for loading bundled images.
+- **`INTERNET`** — required for EAS Updates, crash reporting, and usage analytics (above), and for loading bundled images.
 - **`ACCESS_NETWORK_STATE`** — used to detect whether you are online before attempting an update check.
 - **`VIBRATE`** — used for in-game haptic feedback when you tap buttons or score key moments.
 
@@ -50,15 +87,17 @@ None of these are classified as "sensitive" by Google Play.
 
 ## Children
 
-The App is suitable for general audiences. It is not directed at children under 13 and we knowingly collect no information about them (or anyone else). If you are a parent and have concerns, please contact us.
+The App is suitable for general audiences. It is not directed at children under 13. We do not collect personal information from anyone; the crash reports and usage analytics described above are anonymous, contain no personal identifiers, and are not used for advertising or profiling. If you are a parent and have concerns, please contact us.
 
 ## Data retention and deletion
 
-Because no data is collected by us, there is nothing for us to retain or delete on your behalf. To remove all data the App has stored on your device, uninstall the App from Android Settings → Apps.
+Your game data (player, save, settings) lives only on your device — uninstalling the App from Android Settings → Apps removes it.
+
+The anonymous crash reports described above are held by Sentry for a limited time (Sentry's default is 90 days) and then deleted automatically. Anonymous Firebase Analytics events are retained by Google for a limited period (Firebase's default is up to 2 months for event-level data) and then deleted; you can stop all future analytics collection at any time via **Settings → Usage Analytics**. Because none of these reports contain an identifier tied to you, we cannot look up or single out an individual person's data. If you have any data question, email us and we will help as best we can.
 
 ## Changes to this policy
 
-If we ever start collecting data — for example, to add online features — we will update this policy and bump the **Effective date** at the top, and we will surface the change in-app before any new collection begins.
+If we make material changes to how the App handles data, we will update this policy and bump the **Effective date** at the top. We encourage you to review this page periodically.
 
 ## Contact
 
