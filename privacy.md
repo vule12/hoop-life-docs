@@ -4,7 +4,7 @@ title: Privacy Policy
 
 # Privacy Policy — Hoop Life
 
-**Effective date:** 15 June 2026
+**Effective date:** 18 June 2026
 **App:** Hoop Life (Android package `com.vule12.hooplife`)
 **Developer contact:** ivulinec12@gmail.com
 
@@ -12,19 +12,51 @@ This is the privacy policy for the mobile application **Hoop Life** (the "App").
 
 ## Short version
 
-The App is a single-player, offline basketball career simulator. We do **not** ask you to create an account, we do **not** show ads, and we **never** sell your data or use it for advertising. We do not collect information that personally identifies you.
+The App is a single-player, offline basketball career simulator. You do **not** need an account, and your game progress stays on your device. The App is **free and supported by ads** served by Google AdMob — optional **rewarded** ads you choose to watch for bonus rewards, plus an occasional **full-screen ad between games**.
 
-Three background services make limited internet requests, and we have kept all of them as privacy-light as possible:
+Four background services make limited internet requests, and we have kept the rest as privacy-light as possible:
 
+- **Google AdMob** — to show the ads that fund the free App.
 - **Expo** — to deliver app updates.
 - **Sentry** — to send anonymous crash reports so we can fix bugs.
 - **Firebase Analytics (Google)** — to collect anonymous, aggregated usage statistics (such as which screens are opened and how long the App is used) so we can see how the game is played and improve it. **You can turn this off any time in Settings → Usage Analytics.**
 
-Details on all three are below.
+Details on all four are below.
 
 ## What stays on your device
 
 Everything you do in the App — your player, season progress, stats, achievements, settings — is stored **only on your device** using Android's local storage. It is never uploaded to a server we control. Uninstalling the App removes this data.
+
+## Advertising (Google AdMob)
+
+The App is free and is funded by ads provided by **Google AdMob**, a service operated by Google LLC ("Google"). We show two kinds of ads:
+
+- **Rewarded ads** you choose to watch in exchange for in-game bonuses (extra gems, a training point, an energy refill, or a cap increase). These never play unless you tap to start them.
+- **Interstitial (full-screen) ads** shown occasionally when leaving the post-game screen — never during gameplay.
+
+We do **not** show banner ads, and we do **not** show ads when the App opens.
+
+To select, deliver, measure, and limit the frequency of these ads, Google and its advertising partners may collect or receive:
+
+- Your device's **Advertising ID (AAID)** — a resettable identifier Android provides specifically for advertising
+- **Device information** — model, operating-system version, language, and similar technical details
+- Your **IP address** and the **coarse (country/region) location** derived from it
+- **Ad-interaction data** — which ads were shown, viewed, or tapped, plus basic delivery diagnostics
+
+Depending on your consent and region (see the next section), ads are either **personalized** (selected using the data above) or **non-personalized** (served without using your Advertising ID to build a profile, based only on coarse context such as country). This data is processed by Google as an independent advertising provider and may be shared with Google's advertising partners; it may be processed on servers in the United States. Google's handling of advertising data is described at <https://policies.google.com/technologies/partner-sites> and <https://policies.google.com/privacy>.
+
+We have configured AdMob to serve ads at a **maximum content rating of "Teen,"** so ad content stays suitable for a general audience.
+
+## Your privacy choices and consent
+
+We use Google's **User Messaging Platform (UMP)** to ask for the consent your region requires before showing personalized ads:
+
+- **In the EEA, UK, and Switzerland (GDPR):** the first time you open the App, a consent form lets you accept or refuse personalized ads and manage individual purposes. Refusing still lets you play — you simply receive **non-personalized** ads.
+- **In applicable US states (for example, California under the CPRA):** you are shown a **"Do Not Sell or Share My Personal Information"** choice. Opting out switches you to non-personalized ads.
+
+You can **change your choice at any time** inside the App at **Settings → Ad Privacy Options → Manage**, which re-opens the same consent / "Do Not Sell or Share" form.
+
+You can also **reset or delete your Advertising ID** at any time from your device's **Settings → Privacy → Ads** (the exact wording varies by Android version), which clears the identifier ad providers see.
 
 ## App updates (Expo)
 
@@ -59,7 +91,7 @@ To understand how the App is used in aggregate — so we can fix rough spots and
 - Standard technical context: **device model, Android version, app version, language, and coarse region** (country/region, derived from your IP address — Google does not store your IP as a precise location)
 - A randomly generated **app-instance identifier** that lets us count unique installs without knowing who you are
 
-These reports are **anonymous and aggregated**. They contain **no** name, email, account, contacts, precise location, or any of your game-save content, and we do not use them to identify you or to build an advertising profile. We do not permit Google to use this data to personalise ads, and we have **disabled collection of your device's advertising identifier** — the App does not read or transmit it.
+These reports are **anonymous and aggregated**. They contain **no** name, email, account, contacts, precise location, or any of your game-save content, and we do not use them to identify you or to build an advertising profile. We do not permit Google to use this **analytics** data to personalise ads, and **Firebase Analytics does not use your device's Advertising ID** — that identifier is used only by the advertising system described in "Advertising" above.
 
 **This is optional and you control it.** Analytics are on by default but can be switched off at any time in **Settings → Usage Analytics**; turning it off stops collection immediately.
 
@@ -67,33 +99,29 @@ Google processes this data on our behalf as a service provider, and data may be 
 
 ## What we do **not** do
 
-- No advertising SDKs.
-- No advertising or marketing analytics, and no ad-targeting, profiling, or cross-app/cross-device ad tracking. The usage analytics we do collect (Firebase Analytics, described above) are anonymous, aggregated, used only to improve the App, and can be turned off in Settings.
 - No social login, no user accounts, no email collection.
-- No access to your contacts, calendar, photos, location, microphone, camera, or files.
-- No background tracking.
-- No cross-app or cross-device tracking.
-- No selling or sharing of data with anyone for marketing.
+- No access to your contacts, calendar, photos, precise location, microphone, camera, or files.
+- No background tracking — ads load only while you are actively using the App.
+- We do **not** sell your personal data for money. Our advertising provider (Google) and its partners receive the advertising data described in "Advertising" above to show and measure ads; in regions where this counts as "selling" or "sharing," you can opt out as described in "Your privacy choices and consent."
 
 ## Permissions used
 
 The App requests only these standard Android permissions:
 
-- **`INTERNET`** — required for EAS Updates, crash reporting, and usage analytics (above), and for loading bundled images.
+- **`INTERNET`** — required for ads, EAS Updates, crash reporting, usage analytics (all above), and for loading bundled images.
 - **`ACCESS_NETWORK_STATE`** — used to detect whether you are online before attempting an update check.
+- **`AD_ID`** (`com.google.android.gms.permission.AD_ID`) — lets Google AdMob access your device's **Advertising ID** to serve and measure ads. You can reset or limit this in Android **Settings → Privacy → Ads**.
 - **`VIBRATE`** — used for in-game haptic feedback when you tap buttons or score key moments.
-
-None of these are classified as "sensitive" by Google Play.
 
 ## Children
 
-The App is suitable for general audiences. It is not directed at children under 13. We do not collect personal information from anyone; the crash reports and usage analytics described above are anonymous, contain no personal identifiers, and are not used for advertising or profiling. If you are a parent and have concerns, please contact us.
+The App is suitable for general audiences but is **not directed at children under 13**, and it is an ad-supported game rather than a "Designed for Families" title. Ads are filtered to a **maximum "Teen" content rating**. We do not knowingly collect personal information from children; the crash reports and usage analytics described above are anonymous. If you are a parent and have concerns about the ads or anything else, please contact us.
 
 ## Data retention and deletion
 
 Your game data (player, save, settings) lives only on your device — uninstalling the App from Android Settings → Apps removes it.
 
-The anonymous crash reports described above are held by Sentry for a limited time (Sentry's default is 90 days) and then deleted automatically. Anonymous Firebase Analytics events are retained by Google for a limited period (Firebase's default is up to 2 months for event-level data) and then deleted; you can stop all future analytics collection at any time via **Settings → Usage Analytics**. Because none of these reports contain an identifier tied to you, we cannot look up or single out an individual person's data. If you have any data question, email us and we will help as best we can.
+The anonymous crash reports described above are held by Sentry for a limited time (Sentry's default is 90 days) and then deleted automatically. Anonymous Firebase Analytics events are retained by Google for a limited period (Firebase's default is up to 2 months for event-level data) and then deleted; you can stop all future analytics collection at any time via **Settings → Usage Analytics**. Advertising data handled by Google is retained and deleted according to Google's own policies (linked in "Advertising" above); you can reset the Advertising ID ad providers see at any time in Android **Settings → Privacy → Ads**. Because none of the reports we receive contain an identifier tied to your real-world identity, we cannot look up or single out an individual person's data. If you have any data question, email us and we will help as best we can.
 
 ## Changes to this policy
 
